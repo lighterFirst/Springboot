@@ -20,7 +20,7 @@ public class Controller01 {
     private  RedisTemplate redisTemplate;
     @Autowired
     private  RedisUtil redisUtil;
-@RequestMapping("/redis/{id}")
+    @RequestMapping("/redis/{id}")
     public Object test01(@PathVariable String id){
     Jedis jedis = new Jedis("192.168.26.140",6379);
     jedis.auth("redis123456");

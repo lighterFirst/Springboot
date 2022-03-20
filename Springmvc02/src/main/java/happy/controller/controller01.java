@@ -22,6 +22,7 @@ import java.util.List;
 @Controller
 public class controller01 {
 
+
 @RequestMapping(value = {"/","/login"},method = RequestMethod.GET)
     public ModelAndView test01(){
         ModelAndView mv = new ModelAndView();
@@ -29,6 +30,7 @@ public class controller01 {
         return mv;
     }
 
+    //非空验证
     @RequestMapping(value = "/login",method = RequestMethod.POST)
     public String login(User user, HttpSession session, Model model){
     if(StringUtils.hasLength(user.getUsername())&&StringUtils.hasLength(user.getPassword())) {
@@ -69,6 +71,7 @@ public class controller01 {
     public String editable01(){
         return "table/editable_table";
     }
+
 
     @Autowired
     JdbcTemplate jt;
