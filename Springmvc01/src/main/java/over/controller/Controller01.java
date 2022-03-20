@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class Controller01 {
+    //rest风格
+
     @RequestMapping("/test")
     public Object test01(){
         return "aaaa";
