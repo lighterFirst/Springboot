@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta charset="UTF-8">
+    <title>欢迎页面</title>
+    <script src="jquery/jquery-3.6.0.min.js" type="text/javascript"></script>
+    <script src="bootstrap-3.4.1-dist/bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
+    <link href="bootstrap-3.4.1-dist/bootstrap-3.4.1-dist/css/bootstrap.min.css" rel="stylesheet"/>
+</head>
+<body>
+<br><br><br><br>
+    <form action="/user" method="get">
+        <button class="btn-primary">get请求</button><br><br>
+    </form>
+<form action="/user" method="post">
+    <button class="btn-primary">post请求</button><br>
+</form>
+
+    <button class="btn-danger" id="put01">put请求</button><br><br>
+
+
+    <button class="btn-danger" id="delete01">delete请求</button><br><br>
+
+    <button class="btn-default" id="map01">测试map</button><br><br>
+
+<form action="/map/3333/user/zhangsan" method="get">
+    <input type="submit" value="222"><br><br>
+</form>
+
+<button class="btn-success" id="square01">矩阵风格</button><br><br>
+
+<a href="/view">视图解析器</a>
+
+
+<script type="text/javascript">
+    $("#square01").click(function () {
+        $.ajax({
+            url: "/cars/sell;name=zhangsan;id=1,2,3",
+            type: "get",
+            success: function (result) {
+                alert(result);
+            }
+        })
+    })
+
+    $("#map01").click(function () {
+        $.ajax( {
+            url:"/map/3333/user/zhangsan",
+            type:"get",
+            success: function (result) {
+                alert(result);
+            }
+        })
+    })
+
+    $("#delete01").click(function () {
+        $.ajax({
+            url:"/user",
+            type:"post",
+            data: {_method:"delete"},
+            success: function (result) {
+                alert(result);
+            }
+        })
+
+    })
+
+    $("#put01").click(function () {
+        $.ajax({
+            url:"/user",
+            type:"post",
+            data: {_method:"put"},
+            success: function (result) {
+                alert(result);
+            }
+        })
+
+    })
+</script>
+</body>
+</html>

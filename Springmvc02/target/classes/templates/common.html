@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="commnheader">
+    <meta charset="UTF-8">
+    <title>抽取公共信息</title>
+
+    <link href="css/style.css" rel="stylesheet" th:href="@{/css/style.css}">
+    <link href="css/style-responsive.css" rel="stylesheet" th:href="@{/css/style-responsive.css}">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9] -->
+
+    <script src="js/html5shiv.js"  th:src="@{/js/html/html5shiv.js}"></script>
+    <script src="js/respond.min.js" th:src="@{/js/respond.min.js}"></script>
+  </head>
+  <body>
+  <!-- Placed js at the end of the document so the pages load faster -->
+  <div id="leftmenu" class="left-side sticky-left-side">
+
+      <div th:fragment="headermenu" class="header-section">
+<div id="id1">
+  <script th:src="@{/js/jquery-1.10.2.min.js}"></script>
+  <script th:src="@{/js/jquery-ui-1.9.2.custom.min.js}"></script>
+  <script th:src="@{/js/jquery-migrate-1.2.1.min.js}"></script>
+  <script th:src="@{/js/bootstrap.min.js}"></script>
+  <script th:src="@{/js/modernizr.min.js}"></script>
+  <script th:src="@{/js/jquery.nicescroll.js}"></script>
+
+</div>
+      </div>
+  </div>
+  </body>
+  </html>

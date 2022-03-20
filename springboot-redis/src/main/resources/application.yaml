@@ -1,0 +1,24 @@
+spring:
+  redis:
+    host: 192.168.26.140
+    port: 6379
+    #默认0号数据库
+    database: 0
+    #连接超时时间
+    timeout: 1800000
+    #密码
+    #连接池最大连接数
+    #默认jedis连接工厂
+    lettuce:
+      pool:
+        max-active: 20
+        #最大组赛等待时间
+        max-wait: -1
+        #最大空闲连接
+        max-idle: 5
+        #最小空闲连接
+        min-idle: 0
+    password: redis123456
+    client-type: lettuce
+
+
